@@ -62,7 +62,7 @@ It is placed on the ghost model of the robot. It also serves as the primary inte
 ## YouTube
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=RVbe9YCfJOI">
+  <a href="https://www.youtube.com/watch?v=C5n6csZsO5A&feature=youtu.be">
     <img src=https://github.com/rparak/UR10e_Robotic_Teleoperation/blob/main/images/YouTube.png width="275" height="200">
   </a>
 </p>
