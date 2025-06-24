@@ -1,7 +1,7 @@
 # INTEMAC Twin.Studio – A Digital Twin Platform for Robotic Systems
 *A modular digital twin platform for simulation, visualization, and control of robotic systems.*
 
-![TwinStudio_Teaser_1](https://github.com/user-attachments/assets/9df478e6-fca0-4ec0-810e-bb5f30ab52df)
+![TwinStudio_Teaser_1](/Images/Twin_Studio_Wallpaper.png)
 
 ⚠️ **Note:**  After downloading the asset package from [this link](https://drive.google.com/drive/folders/1sh54Zob04AiZA5fPUpmBnJRQQ3PGjY0-?usp=drive_link), make sure its contents are placed in the *Assets/Objects* folder to ensure the 3D scene loads correctly in Twin.Studio.
 
@@ -39,7 +39,7 @@ UR10e, Robotiq 2F-85
 **IV. Viewpoint** \
 **V. Plane with objects** (Optional)
 
-![Described_env](https://github.com/user-attachments/assets/2921d02c-9b04-42e1-a946-6582a55ebffe)
+![Described_env](/Images/Layout_Scheme.png)
 
 ## User controls:
 ### Forward Control Script
@@ -54,6 +54,8 @@ It is placed on the ghost model of the robot. It also serves as the primary inte
 - **Tool** : Parameter modifying robot kinematics (TCP distance).
 - **Set_Tool** : Sets parameter value in **Tool**.
 
+### Real enviroment:
+![Real_env](/Images/Real_Enviroment.jpeg)
 
 
 ## Contact Info
