@@ -14,6 +14,8 @@ Unity 2022.3.45f1
 
 Developed as part of internal research at INTEMAC by Roman Parák and Lukáš Moravanský, Twin.Studio leverages Unity3D with HDRP to create a high-fidelity, visually realistic simulation environment. The platform supports dynamic motion simulation with precise speed and acceleration control, both forward and inverse kinematics, and script-based motion execution. It includes advanced features such as planned path visualization, realistic pick-and-place operations with gripper and gravity simulation, and real-time robot mirroring via UR-RTDE.
  
+![TwinStudio_Logo](/Images/Twin_Studio_Logo_Stretch.png)
+
 Twin.Studio has been primarily tested with the collaborative robot Universal Robots UR10e and is fully compatible with the entire UR robot family. The platform is designed with extensibility in mind, with ongoing plans to support additional collaborative and industrial robots, as well as a broader range of hardware components including PLCs, sensors, and other automation devices.
  
 Future development will focus on integrating advanced motion planning algorithms and enabling automatic code generation for deployment on physical robotic systems.
