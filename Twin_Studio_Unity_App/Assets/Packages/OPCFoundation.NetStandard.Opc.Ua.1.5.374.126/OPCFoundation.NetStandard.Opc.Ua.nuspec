@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>OPCFoundation.NetStandard.Opc.Ua</id>
+    <version>1.5.374.126</version>
+    <title>OPC UA .NET Standard Library</title>
+    <authors>OPC Foundation</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">licenses/LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>images/logo.jpg</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/OPCFoundation/UA-.NETStandard</projectUrl>
+    <description>This package contains the OPC UA reference implementation and is targeting the .NET Standard Library.</description>
+    <language>en-US</language>
+    <tags>OPCFoundation OPC-UA netstandard ios linux dotnet net netcore</tags>
+    <dependencies>
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" />
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" />
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" />
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Client" version="1.5.374.126" />
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Server" version="1.5.374.126" />
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Gds.Client.Common" version="1.5.374.126" />
+      <dependency id="OPCFoundation.NetStandard.Opc.Ua.Gds.Server.Common" version="1.5.374.126" />
+    </dependencies>
+  </metadata>
+</package>

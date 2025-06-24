@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>OPCFoundation.NetStandard.Opc.Ua.Core</id>
+    <version>1.5.374.126</version>
+    <authors>OPC Foundation</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">licenses/LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>images/logo.jpg</icon>
+    <readme>NugetREADME.md</readme>
+    <projectUrl>https://github.com/OPCFoundation/UA-.NETStandard</projectUrl>
+    <description>OPC UA Core Class Library</description>
+    <releaseNotes>https://github.com/OPCFoundation/UA-.NETStandard/releases</releaseNotes>
+    <copyright>Copyright © 2004-2024 OPC Foundation, Inc</copyright>
+    <tags>OPCFoundation OPC UA netstandard ios linux dotnet net netcore uwp</tags>
+    <repository type="git" url="https://github.com/OPCFoundation/UA-.NETStandard" commit="0b23e5f39b570651dc74897080cc6030207d6f7f" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Bcl.HashCode" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="6.0.4" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Bcl.HashCode" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="6.0.4" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="6.0.4" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Bcl.HashCode" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="3.1.32" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Security.Certificates" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="3.1.32" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.7.2, .NETFramework4.8" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

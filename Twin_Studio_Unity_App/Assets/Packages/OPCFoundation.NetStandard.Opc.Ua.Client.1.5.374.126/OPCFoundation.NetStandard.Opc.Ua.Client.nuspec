@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>OPCFoundation.NetStandard.Opc.Ua.Client</id>
+    <version>1.5.374.126</version>
+    <authors>OPC Foundation</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>images/logo.jpg</icon>
+    <readme>NugetREADME.md</readme>
+    <projectUrl>https://github.com/OPCFoundation/UA-.NETStandard</projectUrl>
+    <description>OPC UA Client Class Library</description>
+    <releaseNotes>https://github.com/OPCFoundation/UA-.NETStandard/releases</releaseNotes>
+    <copyright>Copyright © 2004-2024 OPC Foundation, Inc</copyright>
+    <tags>OPCFoundation OPC UA netstandard ios linux dotnet net netcore uwp</tags>
+    <repository type="git" url="https://github.com/OPCFoundation/UA-.NETStandard" commit="0b23e5f39b570651dc74897080cc6030207d6f7f" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Configuration" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.5.374.126" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.DiagnosticSource" version="6.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

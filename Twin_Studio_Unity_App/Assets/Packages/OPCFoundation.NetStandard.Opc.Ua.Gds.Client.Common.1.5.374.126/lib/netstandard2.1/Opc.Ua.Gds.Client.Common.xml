@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Opc.Ua.Gds.Client.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Opc.Ua.Gds.Client.AdminCredentialsRequiredEventArgs">
+            <summary>
+            The arguments passed with a AdminCredentialsRequiredEventArgs event.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.AdminCredentialsRequiredEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Opc.Ua.Gds.Client.AdminCredentialsRequiredEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.AdminCredentialsRequiredEventArgs.Credentials">
+            <summary>
+            Gets or sets the credentials.
+            </summary>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.AdminCredentialsRequiredEventArgs.CacheCredentials">
+            <summary>
+            Gets or sets a flag indicating the credentials should be cached.
+            </summary>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.AdminCredentialsRequiredEventHandler">
+            <summary>
+            A delegate used to handle AdminCredentialsRequired events.
+            </summary>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.GlobalDiscoveryClientConfiguration">
+            <summary>
+            Stores the configuration the data access node manager.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryClientConfiguration.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryClientConfiguration.Initialize(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes the object during deserialization.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryClientConfiguration.Initialize">
+            <summary>
+            Sets private members to default values.
+            </summary>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient">
+            <summary>
+            A class that provides access to a Global Discovery Server.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.#ctor(Opc.Ua.ApplicationConfiguration,System.String,Opc.Ua.IUserIdentity,Opc.Ua.Client.ISessionFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient"/> class.
+            </summary>
+            <param name="configuration">The application configuration.</param>
+            <param name="endpointUrl">The endpoint Url.</param>
+            <param name="sessionFactory">Used to create session to the server</param>
+            <param name="adminUserIdentity">The user identity for the administrator.</param>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.Configuration">
+            <summary>
+            Gets the application.
+            </summary>
+            <value>
+            The application.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.AdminCredentials">
+            <summary>
+            Gets or sets the admin credentials.
+            </summary>
+            <value>
+            The admin credentials.
+            </value>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.AdminCredentialsRequired">
+            <summary>
+            Raised when admin credentials are required.
+            </summary>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.Session">
+            <summary>
+            Gets the session.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.EndpointUrl">
+            <summary>
+            Gets or sets the endpoint URL.
+            </summary>
+            <value>
+            The endpoint URL.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.PreferredLocales">
+            <summary>
+            Gets or sets the preferred locales.
+            </summary>
+            <value>
+            The preferred locales.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.IsConnected">
+            <summary>
+            Gets a value indicating whether a session is connected.
+            </summary>
+            <value>
+              <c>true</c> if [is connected]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetDefaultServerUrls(Opc.Ua.Gds.Client.LocalDiscoveryServerClient)">
+            <summary>
+             Returns list of servers known to the LDS, excluding GDS servers.
+            </summary>
+            <param name="lds">The LDS to use.</param>
+            <returns>
+            TRUE if successful; FALSE otherwise.
+            </returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetDefaultGdsUrls(Opc.Ua.Gds.Client.LocalDiscoveryServerClient)">
+            <summary>
+            Returns list of GDS servers known to the LDS.
+            </summary>
+            <param name="lds">The LDS to use.</param>
+            <returns>
+            TRUE if successful; FALSE otherwise.
+            </returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.Connect">
+            <summary>
+            Connects using the default endpoint.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.Connect(System.String)">
+            <summary>
+            Connects the specified endpoint URL.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <exception cref="T:System.ArgumentNullException">endpointUrl</exception>
+            <exception cref="T:System.ArgumentException">endpointUrl</exception>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.Connect(Opc.Ua.ConfiguredEndpoint)">
+            <summary>
+            Connects the specified endpoint.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.Disconnect">
+            <summary>
+            Disconnect the client connection.
+            </summary>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.KeepAlive">
+            <summary>
+            Occurs when keep alive occurs.
+            </summary>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.ServerStatusChanged">
+            <summary>
+            Occurs when the server status changes.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.FindApplication(System.String)">
+            <summary>
+            Finds the applications with the specified application uri.
+            </summary>
+            <param name="applicationUri">The application URI.</param>
+            <returns>The matching application.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.QueryServers(System.UInt32,System.String,System.String,System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Queries the GDS for any servers matching the criteria.
+            </summary>
+            <param name="maxRecordsToReturn">The max records to return.</param>
+            <param name="applicationName">The filter applied to the application name.</param>
+            <param name="applicationUri">The filter applied to the application uri.</param>
+            <param name="productUri">The filter applied to the product uri.</param>
+            <param name="serverCapabilities">The filter applied to the server capabilities.</param>
+            <returns>A enumarator used to access the results.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.QueryServers(System.UInt32,System.UInt32,System.String,System.String,System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Queries the GDS for any servers matching the criteria.
+            </summary>
+            <param name="startingRecordId">The id of the first record to return.</param>
+            <param name="maxRecordsToReturn">The max records to return.</param>
+            <param name="applicationName">The filter applied to the application name.</param>
+            <param name="applicationUri">The filter applied to the application uri.</param>
+            <param name="productUri">The filter applied to the product uri.</param>
+            <param name="serverCapabilities">The filter applied to the server capabilities.</param>
+            <returns>A enumerator used to access the results.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.QueryServers(System.UInt32,System.UInt32,System.String,System.String,System.String,System.Collections.Generic.IList{System.String},System.DateTime@)">
+            <summary>
+            Queries the GDS for any servers matching the criteria.
+            </summary>
+            <param name="startingRecordId">The id of the first record to return.</param>
+            <param name="maxRecordsToReturn">The max records to return.</param>
+            <param name="applicationName">The filter applied to the application name.</param>
+            <param name="applicationUri">The filter applied to the application uri.</param>
+            <param name="productUri">The filter applied to the product uri.</param>
+            <param name="serverCapabilities">The filter applied to the server capabilities.</param>
+            <param name="lastCounterResetTime">The time when the counter was last changed.</param>
+            <returns>A enumerator used to access the results.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.QueryApplications(System.UInt32,System.UInt32,System.String,System.String,System.UInt32,System.String,System.Collections.Generic.IList{System.String},System.DateTime@,System.UInt32@)">
+            <summary>
+            Queries the GDS for any servers matching the criteria.
+            </summary>
+            <param name="startingRecordId">The id of the first record to return.</param>
+            <param name="maxRecordsToReturn">The max records to return.</param>
+            <param name="applicationName">The filter applied to the application name.</param>
+            <param name="applicationUri">The filter applied to the application uri.</param>
+            <param name="applicationType">The filter applied to the application uri.</param>
+            <param name="productUri">The filter applied to the product uri.</param>
+            <param name="serverCapabilities">The filter applied to the server capabilities.</param>
+            <param name="lastCounterResetTime">The time when the counter was last changed.</param>
+            <param name="nextRecordId">The id of the next record.</param>
+            <returns>A enumerator used to access the results.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetApplication(Opc.Ua.NodeId)">
+            <summary>
+            Get the application record.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <returns>The application record for the specified application id.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.RegisterApplication(Opc.Ua.Gds.ApplicationRecordDataType)">
+            <summary>
+            Registers the application.
+            </summary>
+            <param name="application">The application.</param>
+            <returns>The application id assigned to the application.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetCertificates(Opc.Ua.NodeId,Opc.Ua.NodeId,Opc.Ua.NodeId[]@,System.Byte[][]@)">
+             <summary>
+             Returns the Certificates assigned to Application and associated with the CertificateGroup.
+             </summary>
+             <param name="applicationId">The identifier assigned to the Application by the GDS.</param>
+             <param name="certificateGroupId">An identifier for the CertificateGroup that the Certificates belong to.
+            If null, the CertificateManager shall return the Certificates for all CertificateGroups assigned to the Application.</param>
+             <param name="certificateTypeIds">The CertificateTypes that currently have a Certificate assigned.
+             The length of this list is the same as the length as certificates list.</param>
+             <param name="certificates">A list of DER encoded Certificates assigned to Application.
+             This list only includes Certificates that are currently valid.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.CheckRevocationStatus(System.Byte[],Opc.Ua.StatusCode@,System.DateTime@)">
+            <summary>
+            Checks the provided certificate for validity
+            </summary>
+            <param name="certificate">The DER encoded form of the Certificate to check.</param>
+            <param name="certificateStatus">The first error encountered when validating the Certificate.</param>
+            <param name="validityTime">When the result expires and should be rechecked. DateTime.MinValue if this is unknown.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.UpdateApplication(Opc.Ua.Gds.ApplicationRecordDataType)">
+            <summary>
+            Updates the application.
+            </summary>
+            <param name="application">The application.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.UnregisterApplication(Opc.Ua.NodeId)">
+            <summary>
+            Unregisters the application.
+            </summary>
+            <param name="applicationId">The application id.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.RevokeCertificate(Opc.Ua.NodeId,System.Byte[])">
+            <summary>
+            Revokes a Certificate issued to the Application by the CertificateManager
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <param name="certificate">The certificate to revoke</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.StartNewKeyPairRequest(Opc.Ua.NodeId,Opc.Ua.NodeId,Opc.Ua.NodeId,System.String,System.Collections.Generic.IList{System.String},System.String,System.String)">
+            <summary>
+            Requests a new certificate.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <param name="certificateGroupId">The authority.</param>
+            <param name="certificateTypeId">Type of the certificate.</param>
+            <param name="subjectName">Name of the subject.</param>
+            <param name="domainNames">The domain names.</param>
+            <param name="privateKeyFormat">The private key format (PEM or PFX).</param>
+            <param name="privateKeyPassword">The private key password.</param>
+            <returns>
+            The id for the request which is used to check when it is approved.
+            </returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.StartSigningRequest(Opc.Ua.NodeId,Opc.Ua.NodeId,Opc.Ua.NodeId,System.Byte[])">
+            <summary>
+            Signs the certificate.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <param name="certificateGroupId">The group of the trust list.</param>
+            <param name="certificateTypeId">The type of the trust list.</param>
+            <param name="certificateRequest">The certificate signing request (CSR).</param>
+            <returns>The id for the request which is used to check when it is approved.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.FinishRequest(Opc.Ua.NodeId,Opc.Ua.NodeId,System.Byte[]@,System.Byte[][]@)">
+            <summary>
+            Checks the request status.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <param name="requestId">The request id.</param>
+            <param name="privateKey">The private key.</param>
+            <param name="issuerCertificates">The issuer certificates.</param>
+            <returns>The public key.</returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetCertificateGroups(Opc.Ua.NodeId)">
+            <summary>
+            Gets the certificate groups.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetTrustList(Opc.Ua.NodeId,Opc.Ua.NodeId)">
+            <summary>
+            Gets the trust lists method.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <param name="certificateGroupId">Type of the trust list.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.GetCertificateStatus(Opc.Ua.NodeId,Opc.Ua.NodeId,Opc.Ua.NodeId)">
+            <summary>
+            Gets the certificate status.
+            </summary>
+            <param name="applicationId">The application id.</param>
+            <param name="certificateGroupId">Group of the trust list.</param>
+            <param name="certificateTypeId">Type of the trust list.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.GlobalDiscoveryServerClient.ReadTrustList(Opc.Ua.NodeId)">
+            <summary>
+            Reads the trust list.
+            </summary>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.RegisteredApplication">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.ApplicationUri">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.ApplicationName">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.ProductUri">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.DiscoveryUrl">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.ServerCapability">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.ConfigurationFile">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.ServerUrl">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.CertificateStorePath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.CertificateSubjectName">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.CertificatePublicKeyPath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.CertificatePrivateKeyPath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.TrustListStorePath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.IssuerListStorePath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.HttpsCertificatePublicKeyPath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.HttpsCertificatePrivateKeyPath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.HttpsTrustListStorePath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.HttpsIssuerListStorePath">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.CertificateRequestId">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.Domains">
+            <remarks/>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.RegisteredApplication.RegistrationType">
+            <remarks/>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.RegisteredApplication.GetHttpsDomainName">
+            <summary>
+            Gets the name of the HTTPS domain for the application.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.RegistrationType">
+            <remarks/>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.RegistrationType.ClientPull">
+            <remarks/>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.RegistrationType.ServerPull">
+            <remarks/>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.RegistrationType.ServerPush">
+            <remarks/>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.ServerCapabilities">
+            <summary>
+            The set known capability identifiers.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerCapabilities.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Opc.Ua.Gds.Client.ServerCapabilities"/> class.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerCapabilities.Load">
+            <summary>
+            Loads the default set of server capability identifiers.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerCapabilities.Load(System.IO.Stream)">
+            <summary>
+            Loads the set of server capability identifiers from the stream.
+            </summary>
+            <param name="istrm">The input stream.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerCapabilities.Find(System.String)">
+            <summary>
+            Finds the server capability with the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>The server capability, if found. NULL if it does not exist.</returns>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.ServerCapability">
+            <summary>
+            A server capability.
+            </summary>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerCapability.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerCapability.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerCapability.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerCapability.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="format">The format. Must be null.</param>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.NoInformation">
+            <summary>
+            No information is available.
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.LiveData">
+            <summary>
+            The server supports live data.
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.AlarmsAndConditions">
+            <summary>
+            The server supports alarms and conditions
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.HistoricalData">
+            <summary>
+            The server supports historical data.
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.HistoricalEvents">
+            <summary>
+            The server supports historical events.
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.GlobalDiscoveryServer">
+            <summary>
+            The server is a global discovery server.
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.LocalDiscoveryServer">
+            <summary>
+            The server is a local discovery server.
+            </summary>
+        </member>
+        <member name="F:Opc.Ua.Gds.Client.ServerCapability.DI">
+            <summary>
+            The server supports the device integration (DI) information model.
+            </summary>
+        </member>
+        <member name="T:Opc.Ua.Gds.Client.ServerPushConfigurationClient">
+            <summary>
+            A class used to access the Push Configuration information model.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.#ctor(Opc.Ua.ApplicationConfiguration,Opc.Ua.Client.ISessionFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Opc.Ua.Gds.Client.ServerPushConfigurationClient"/> class.
+            </summary>
+            <param name="configuration">The application configuration.</param>
+            <param name="sessionFactory">Used to create session to the server.</param>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Configuration">
+            <summary>
+            Gets the application instance.
+            </summary>
+            <value>
+            The application instance.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.AdminCredentials">
+            <summary>
+            Gets or sets the admin credentials.
+            </summary>
+            <value>
+            The admin credentials.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.EndpointUrl">
+            <summary>
+            Gets or sets the endpoint URL.
+            </summary>
+            <value>
+            The endpoint URL.
+            </value>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.ServerPushConfigurationClient.AdminCredentialsRequired">
+            <summary>
+            Raised when admin credentials are required.
+            </summary>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.ServerPushConfigurationClient.ConnectionStatusChanged">
+            <summary>
+            Raised when the connection status changes.
+            </summary>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.PreferredLocales">
+            <summary>
+            Gets or sets the preferred locales.
+            </summary>
+            <value>
+            The preferred locales.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.IsConnected">
+            <summary>
+            Gets a value indicating whether the session is connected.
+            </summary>
+            <value>
+              <c>true</c> if the session is connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Session">
+            <summary>
+            Gets the session.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="P:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Endpoint">
+            <summary>
+            Gets the endpoint.
+            </summary>
+            <value>
+            The endpoint.
+            </value>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.ServerPushConfigurationClient.KeepAlive">
+            <summary>
+            Occurs when keep alive occurs.
+            </summary>
+        </member>
+        <member name="E:Opc.Ua.Gds.Client.ServerPushConfigurationClient.ServerStatusChanged">
+            <summary>
+            Occurs when the server status changes.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Connect">
+            <summary>
+            Connects using the default endpoint.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Connect(System.String)">
+            <summary>
+            Connects the specified endpoint URL.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <exception cref="T:System.ArgumentNullException">endpointUrl</exception>
+            <exception cref="T:System.ArgumentException">endpointUrl</exception>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Connect(Opc.Ua.ConfiguredEndpoint)">
+            <summary>
+            Connects the specified endpoint.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.Disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.GetSupportedKeyFormats">
+            <summary>
+            Gets the supported key formats.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Connection to server is not active.</exception>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.ReadTrustList(Opc.Ua.TrustListMasks)">
+            <summary>
+            Reads the trust list.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.UpdateTrustList(Opc.Ua.TrustListDataType)">
+            <summary>
+            Updates the trust list.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.AddCertificate(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Boolean)">
+            <summary>
+            Add certificate.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.RemoveCertificate(System.String,System.Boolean)">
+            <summary>
+            Remove certificate.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.GetCertificates(Opc.Ua.NodeId,Opc.Ua.NodeId[]@,System.Byte[][]@)">
+             <summary>
+             returns the Certificates assigned to CertificateTypes associated with a CertificateGroup.
+             </summary>
+             <param name="certificateGroupId">The identifier for the CertificateGroup.</param>
+             <param name="certificateTypeIds">The CertificateTypes that currently have a Certificate assigned.
+            The length of this list is the same as the length as certificates list.
+            An empty list if the CertificateGroup does not have any CertificateTypes.</param>
+             <param name="certificates">A list of DER encoded Certificates assigned to CertificateGroup.
+            The certificateType for the Certificate is specified by the corresponding element in the certificateTypes parameter.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.CreateSigningRequest(Opc.Ua.NodeId,Opc.Ua.NodeId,System.String,System.Boolean,System.Byte[])">
+            <summary>
+            Creates the CSR.
+            </summary>
+            <param name="certificateGroupId">The certificate group identifier.</param>
+            <param name="certificateTypeId">The certificate type identifier.</param>
+            <param name="subjectName">Name of the subject.</param>
+            <param name="regeneratePrivateKey">if set to <c>true</c> [regenerate private key].</param>
+            <param name="nonce">The nonce.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.UpdateCertificate(Opc.Ua.NodeId,Opc.Ua.NodeId,System.Byte[],System.String,System.Byte[],System.Byte[][])">
+            <summary>
+            Updates the certificate.
+            </summary>
+            <param name="certificateGroupId">The group of the trust list.</param>
+            <param name="certificateTypeId">The type of the trust list.</param>
+            <param name="certificate">The certificate.</param>
+            <param name="privateKeyFormat">The format of the private key, PFX or PEM.</param>
+            <param name="privateKey">The private ky.</param>
+            <param name="issuerCertificates">An array containing the chain of issuer certificates.</param>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.GetRejectedList">
+            <summary>
+            Reads the rejected  list.
+            </summary>
+        </member>
+        <member name="M:Opc.Ua.Gds.Client.ServerPushConfigurationClient.ApplyChanges">
+            <summary>
+            Restarts this instance.
+            </summary>
+        </member>
+    </members>
+</doc>
